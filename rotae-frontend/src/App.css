@@ -1,0 +1,57 @@
+
+:root {
+ --azul-escuro: #2C3E50; 
+ --verde-cta: #38C172;  
+ --turquesa-link: #00A3CC;
+ --fundo-principal: #f8f9fa;
+ font-family: 'Arial', sans-serif, system-ui, Avenir, Helvetica;
+ line-height: 1.5;
+ font-weight: 400;
+ color: #213547;
+
+ font-synthesis: none;
+ text-rendering: optimizeLegibility;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+ height: 100%;
+ margin: 0;
+ padding: 0;
+}
+
+body { 
+ display: block; 
+ min-height: 100vh;
+ background-color: var(--fundo-principal); 
+}
+
+
+a {
+ font-weight: 500;
+ color: var(--turquesa-link);
+ text-decoration: none;
+ transition: color 0.3s;
+}
+
+a:hover {
+ color: var(--verde-cta);
+}
+
+button {
+ border-radius: 8px;
+ border: 1px solid transparent;
+ padding: 0.6em 1.2em;
+ font-size: 1em;
+ font-weight: 500;
+ font-family: inherit;
+ background-color: #f9f9f9;
+ cursor: pointer;
+ transition: background-color 0.25s, box-shadow 0.25s;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--turquesa-link);
+}

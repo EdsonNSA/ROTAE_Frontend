@@ -1,0 +1,81 @@
+.site-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 30px;
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+
+.main-nav {
+    flex-grow: 1; 
+    margin-left: 50px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    margin-right: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #555;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+
+.nav-link.active {
+    color: #007bff;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.create-button {
+
+    background-color: #28a745;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.create-button:hover {
+    background-color: #218838;
+}
+
+.user-icon {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #333;
+}

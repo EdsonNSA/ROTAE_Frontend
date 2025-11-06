@@ -1,0 +1,146 @@
+/* Footer.ft.css */
+
+/* ==================================== */
+/* 1. VARIÁVEIS DE CORES */
+/* ==================================== */
+:root {
+ --azul-profundo: #2C3E50; /* Fundo do Footer */
+ --verde-cta: #38C172;  /* Destaque */
+ --turquesa-link: #00A3CC; /* Ícones Sociais */
+ --texto-claro: #f8f8f8;  /* Texto Padrão */
+}
+
+/* ==================================== */
+/* 2. ESTRUTURA E LAYOUT DO FOOTER */
+/* ==================================== */
+.ft-main-footer {
+ background-color: var(--azul-profundo);
+ color: var(--texto-claro);
+ font-family: 'Arial', sans-serif;
+ padding-top: 40px;
+}
+
+.ft-footer-content {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px 30px 20px;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+ border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ft-footer-section {
+ flex: 1;
+ min-width: 250px;
+ margin-bottom: 30px;
+}
+
+.ft-footer-section h4 {
+ color: white;
+ font-size: 1.2em;
+ margin-bottom: 15px;
+ border-left: 3px solid var(--turquesa-link); /* Destaque visual */
+ padding-left: 10px;
+}
+
+
+/* --- Coluna 1: Info e Logo --- */
+.ft-footer-logo-link {
+display: flex;
+align-items: center;
+text-decoration: none;
+margin-bottom: 10px;
+}
+
+.ft-footer-logo {
+ height: 35px;
+ margin-right: 8px;
+ /* Inverter cores se o fundo da logo for escuro */
+ filter: brightness(0) invert(1); 
+}
+
+.ft-footer-logo-text {
+font-size: 1.6rem;
+ font-weight: bold;
+ color: var(--verde-cta);
+}
+
+.ft-tagline {
+ font-size: 0.9em;
+ color: #ccc;
+ margin-bottom: 15px;
+}
+
+/* Links Sociais */
+.ft-social-links a {
+color: var(--turquesa-link);
+ font-size: 1.5rem;
+ margin-right: 15px;
+ transition: color 0.3s;
+}
+
+.ft-social-links a:hover {
+ color: var(--verde-cta);
+}
+
+
+/* --- Coluna 2: Links --- */
+.ft-footer-links ul {
+ list-style: none;
+ padding: 0;
+}
+
+.ft-footer-links li {
+ margin-bottom: 8px;
+}
+
+.ft-footer-links a {
+ color: #ccc;
+ text-decoration: none;
+ font-size: 0.95em;
+ transition: color 0.3s;
+}
+
+.ft-footer-links a:hover {
+ color: var(--verde-cta);
+}
+
+/* --- Coluna 3: Contato --- */
+.ft-footer-contact p {
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ color: #ccc;
+ margin-bottom: 10px;
+ font-size: 0.95em;
+}
+
+.ft-footer-contact svg {
+ color: var(--turquesa-link);
+}
+
+
+/* --- Rodapé Inferior --- */
+.ft-footer-bottom {
+ text-align: center;
+ padding: 15px 20px;
+ font-size: 0.8em;
+ background-color: #233140; /* Um tom ligeiramente mais escuro */
+}
+
+/* ==================================== */
+/* 3. RESPONSIVIDADE */
+/* ==================================== */
+
+@media (max-width: 768px) {
+ .ft-footer-content {
+ flex-direction: column;
+ gap: 20px;
+ }
+
+ .ft-footer-section {
+ min-width: 100%;
+ margin-bottom: 10px;
+ }
+}

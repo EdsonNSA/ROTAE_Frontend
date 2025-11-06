@@ -1,0 +1,248 @@
+:root {
+    --azul-escuro: #2C3E50;
+    --verde-cta: #38C172; 
+    --turquesa-link: #00A3CC;
+    --fundo-principal: #f4f7f6;
+    --sombra-media: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rtn-roteiros-container {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--fundo-principal);
+    min-height: 100vh;
+}
+
+.rtn-roteiros-container h1 {
+    color: var(--azul-escuro);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+}
+
+.rtn-subtitle {
+    text-align: center;
+     color: #666;
+    margin-bottom: 30px;
+}
+
+
+.rtn-filter-bar {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 15px;
+    background-color: var(--cinza-claro);
+    border-radius: 8px;
+    box-shadow: var(--sombra-leve);
+}
+
+.rtn-search-input-group {
+    position: relative;
+    flex-grow: 1;
+     max-width: 400px;
+}
+
+.rtn-search-icon {
+    position: absolute;
+     top: 50%;
+     left: 10px;
+     transform: translateY(-50%);
+     color: var(--turquesa-icone);
+}
+
+.rtn-filter-bar input[type="text"] {
+    width: 100%;
+     padding: 10px 10px 10px 35px;
+     border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.rtn-filter-bar input[type="text"]:focus {
+    border-color: var(--turquesa-link);
+    outline: none;
+}
+
+.rtn-category-select {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 17px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: white;
+}
+
+.rtn-custom-roteiro-cta {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+     background-color: #e9ecef;
+    padding: 15px;
+     border-radius: 8px;
+    margin-bottom: 30px;
+    color: var(--azul-escuro);
+}
+
+.rtn-route-icon {
+    font-size: 1.5em;
+    color: var(--turquesa-link);
+}
+
+.rtn-cta-custom-button {
+    background-color: var(--turquesa-link);
+     color: white;
+     padding: 8px 15px;
+     border-radius: 5px;
+    text-decoration: none;
+     font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.rtn-cta-custom-button:hover {
+    background-color: #007bb0;
+}
+
+
+.rtn-roteiros-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
+    gap: 30px;
+}
+
+.rtn-roteiro-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--sombra-media);
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rtn-roteiro-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.rtn-card-image {
+     height: 220px;
+     background-size: cover;
+     background-position: center;
+     position: relative;
+}
+
+.rtn-card-tag {
+     position: absolute;
+     top: 10px;
+    padding: 5px 10px;
+     border-radius: 4px;
+     font-size: 0.85em;
+     font-weight: bold;
+}
+
+.rtn-card-tag-theme {
+     left: 10px;
+     background-color: var(--azul-escuro);
+     color: white;
+}
+
+.rtn-card-tag-premium {
+     right: 10px;
+     background-color: gold;
+     color: var(--azul-escuro);
+}
+
+.rtn-card-details {
+     padding: 20px;
+     flex-grow: 1;
+     display: flex;
+     flex-direction: column;
+}
+
+.rtn-card-details h3 {
+     color: var(--azul-escuro);
+     margin-top: 0;
+     margin-bottom: 10px;
+     font-size: 1.7em;
+}
+
+.rtn-card-meta p {
+     margin: 5px 0;
+     color: #555;
+     font-size: 0.95em;
+}
+
+.rtn-card-meta svg {
+     color: var(--turquesa-link);
+     margin-right: 5px;
+}
+
+.rtn-card-description {
+     color: #777;
+     margin: 15px 0;
+     min-height: 40px;
+}
+
+.rtn-card-rating-points {
+    display: flex;
+    align-items: center;
+     gap: 5px;
+    margin-bottom: 15px;
+}
+
+.rtn-rating-value {
+    font-weight: bold;
+     color: var(--verde-cta);
+    font-size: 1.1em;
+}
+
+.rtn-rating-stars {
+    color: gold;
+    font-size: 1.2em;
+}
+
+.rtn-cta-details-button {
+    width: 100%;
+    padding: 12px;
+     background-color: var(--verde-cta);
+     color: white;
+     text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+     border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.rtn-cta-details-button:hover {
+    background-color: #2e9f5b;
+}
+
+.rtn-no-results {
+     grid-column: 1 / -1;
+    text-align: center;
+     padding: 50px;
+    font-size: 1.2em;
+     color: #999;
+     background-color: white;
+     border: 1px dashed #ccc;
+ border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+ .rtn-roteiros-list {
+ grid-template-columns: 1fr;
+ }
+}
+
+@media (max-width: 768px) {
+ .rtn-filter-bar {
+ flex-direction: column;
+}
+}
