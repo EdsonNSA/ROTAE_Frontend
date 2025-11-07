@@ -2,9 +2,10 @@
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-    padding: 15px 30px;
-    background-color: #ffffff; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    background-color: var(--fundo-secundario); 
+    box-shadow: var(--sombra-card);
+    border-bottom: 1px solid var(--cor-detalhe);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -13,7 +14,7 @@
 .logo a {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: var(--texto-principal);
     text-decoration: none;
 }
 
@@ -21,6 +22,7 @@
 .main-nav {
     flex-grow: 1; 
     margin-left: 50px;
+    transition: margin 0.3s ease;
 }
 
 .nav-list {
@@ -32,24 +34,24 @@
 
 .nav-list li {
     margin-right: 25px;
+    transition: margin 0.3s ease;
 }
 
 .nav-link {
     text-decoration: none;
-    color: #555;
+    color: var(--texto-secundario);
     padding: 5px 0;
     transition: color 0.3s;
 }
 
-
 .nav-link.active {
-    color: #007bff;
+    color: var(--cor-cta);
     font-weight: bold;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid var(--cor-cta);
 }
 
 .nav-link:hover {
-    color: #000;
+    color: var(--texto-principal);
 }
 
 
@@ -60,22 +62,58 @@
 }
 
 .create-button {
-
-    background-color: #28a745;
-    color: white;
+    background-color: var(--cor-cta);
+    color: var(--texto-principal);
     padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: var(--border-radius-pequeno);
     text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.3s;
+    transition: filter 0.3s;
 }
 
 .create-button:hover {
-    background-color: #218838;
+    filter: brightness(0.9);
 }
 
 .user-icon {
     font-size: 1.5rem;
     text-decoration: none;
-    color: #333;
+    color: var(--texto-principal);
+}
+
+
+@media (max-width: 768px) {
+    .site-header {
+        padding: 15px 15px;
+    }
+
+    .logo a {
+        font-size: 1.3rem;
+    }
+
+    .main-nav {
+        margin-left: 20px;
+    }
+
+    .nav-list li {
+        margin-right: 15px;
+    }
+
+    .create-button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 15px 10px;
+    }
+    .main-nav {
+        display: none; 
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
 }

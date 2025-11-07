@@ -1,146 +1,197 @@
-/* Footer.ft.css */
-
-/* ==================================== */
-/* 1. VARIÁVEIS DE CORES */
-/* ==================================== */
-:root {
- --azul-profundo: #2C3E50; /* Fundo do Footer */
- --verde-cta: #38C172;  /* Destaque */
- --turquesa-link: #00A3CC; /* Ícones Sociais */
- --texto-claro: #f8f8f8;  /* Texto Padrão */
-}
-
-/* ==================================== */
-/* 2. ESTRUTURA E LAYOUT DO FOOTER */
-/* ==================================== */
 .ft-main-footer {
- background-color: var(--azul-profundo);
- color: var(--texto-claro);
- font-family: 'Arial', sans-serif;
- padding-top: 40px;
+  background-color: var(--fundo-secundario);
+  color: var(--texto-principal);
+  font-family: 'Inter', sans-serif;
+  padding-top: 40px;
+  border-top: 1px solid var(--cor-detalhe);
 }
 
 .ft-footer-content {
- max-width: 1200px;
- margin: 0 auto;
- padding: 0 20px 30px 20px;
- display: flex;
- justify-content: space-between;
- flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
- border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; 
+  flex-wrap: wrap; 
+  border-bottom: 1px solid var(--cor-detalhe);
 }
 
 .ft-footer-section {
- flex: 1;
- min-width: 250px;
- margin-bottom: 30px;
+  flex: 1 1 220px;
+  margin-bottom: 20px;
 }
 
 .ft-footer-section h4 {
- color: white;
- font-size: 1.2em;
- margin-bottom: 15px;
- border-left: 3px solid var(--turquesa-link); /* Destaque visual */
- padding-left: 10px;
+  color: var(--texto-principal);
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  border-left: 3px solid var(--cor-cta); 
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
 }
 
-
-/* --- Coluna 1: Info e Logo --- */
 .ft-footer-logo-link {
-display: flex;
-align-items: center;
-text-decoration: none;
-margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 10px;
 }
 
 .ft-footer-logo {
- height: 35px;
- margin-right: 8px;
- /* Inverter cores se o fundo da logo for escuro */
- filter: brightness(0) invert(1); 
+  height: 35px;
+  margin-right: 8px;
+  filter: brightness(0) invert(1); 
 }
 
 .ft-footer-logo-text {
-font-size: 1.6rem;
- font-weight: bold;
- color: var(--verde-cta);
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--cor-cta);
 }
 
 .ft-tagline {
- font-size: 0.9em;
- color: #ccc;
- margin-bottom: 15px;
+  font-size: 0.85em;
+  color: var(--texto-secundario);
+  margin-bottom: 15px;
+  line-height: 1.4;
 }
 
-/* Links Sociais */
+.ft-social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
 .ft-social-links a {
-color: var(--turquesa-link);
- font-size: 1.5rem;
- margin-right: 15px;
- transition: color 0.3s;
+  color: var(--texto-secundario);
+  font-size: 1.3rem;
+  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ft-social-links a:hover {
- color: var(--verde-cta);
+  color: var(--cor-cta);
 }
 
 
-/* --- Coluna 2: Links --- */
 .ft-footer-links ul {
- list-style: none;
- padding: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .ft-footer-links li {
- margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .ft-footer-links a {
- color: #ccc;
- text-decoration: none;
- font-size: 0.95em;
- transition: color 0.3s;
+  color: var(--texto-secundario);
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s;
 }
 
 .ft-footer-links a:hover {
- color: var(--verde-cta);
+  color: var(--cor-cta);
 }
 
-/* --- Coluna 3: Contato --- */
 .ft-footer-contact p {
- display: flex;
- align-items: center;
- gap: 8px;
- color: #ccc;
- margin-bottom: 10px;
- font-size: 0.95em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--texto-secundario);
+  margin-bottom: 10px;
+  font-size: 0.9em;
 }
 
 .ft-footer-contact svg {
- color: var(--turquesa-link);
+  color: var(--cor-cta);
+  flex-shrink: 0;
+  font-size: 1.1em;
 }
 
 
-/* --- Rodapé Inferior --- */
 .ft-footer-bottom {
- text-align: center;
- padding: 15px 20px;
- font-size: 0.8em;
- background-color: #233140; /* Um tom ligeiramente mais escuro */
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.8em;
+  background-color: var(--fundo-principal); 
+  color: var(--texto-secundario);
 }
 
-/* ==================================== */
-/* 3. RESPONSIVIDADE */
-/* ==================================== */
 
 @media (max-width: 768px) {
- .ft-footer-content {
- flex-direction: column;
- gap: 20px;
- }
+  .ft-footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    padding-bottom: 20px;
+  }
 
- .ft-footer-section {
- min-width: 100%;
- margin-bottom: 10px;
- }
+  .ft-footer-section {
+    min-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .ft-footer-section h4 {
+      font-size: 1.15em;
+      margin-bottom: 10px;
+  }
+
+  .ft-footer-logo-text {
+      font-size: 1.5rem;
+  }
+
+  .ft-tagline {
+      font-size: 0.8em;
+  }
+
+  .ft-social-links {
+      margin-top: 10px;
+  }
+  
+  .ft-social-links a {
+      font-size: 1.4rem;
+  }
+
+  .ft-footer-contact p,
+  .ft-footer-links a {
+      font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+    .ft-main-footer {
+        padding-top: 30px;
+    }
+    .ft-footer-content {
+        padding: 0 15px 20px 15px;
+    }
+    .ft-footer-section h4 {
+        font-size: 1.1em;
+    }
+    .ft-footer-logo-text {
+        font-size: 1.4rem;
+    }
+    .ft-tagline {
+        font-size: 0.75em;
+    }
+    .ft-social-links {
+        gap: 12px;
+    }
+    .ft-social-links a {
+        font-size: 1.3rem;
+    }
+    .ft-footer-contact p,
+    .ft-footer-links a {
+        font-size: 0.8em;
+    }
+    .ft-footer-bottom {
+        padding: 12px 15px;
+        font-size: 0.75em;
+    }
 }
