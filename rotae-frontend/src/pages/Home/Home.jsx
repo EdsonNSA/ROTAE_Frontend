@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { FaSearch, FaMountain, FaUtensils, FaUsers, FaCalendarAlt, FaStar, FaRoute } from 'react-icons/fa';
 import './Home.css';
-
+import imgcarrossel1 from '../../images/carrossel1.jpeg';
+import imgCristo from '../../images/Cristo.jpg';
+import imgBambu from '../../images/Parque_do_Bambu.jpg';
+import imgMuseu from '../../images/museu_memorias_vivas.jpg';
+import imgPanela from '../../images/panela_de_barro.jpg';
+import imgcarrossel2 from '../../images/carrossel2.jpeg';
+import imgcarrossel3 from '../../images/carrossel3.jpg';
 
 const heroImages = [
-    'public/images/home-bg-1.jpeg',
-    'https://placehold.co/1920x1080/0f4d84/F0F4F8?text=Belo+Jardim+2',
-    'https://placehold.co/1920x1080/0b7467/F0F4F8?text=Belo+Jardim+3' 
+    imgcarrossel1,
+    imgcarrossel2,
+    imgcarrossel3 
 ];
 
 const categorias = [
-    { titulo: 'Atrativos Naturais', icone: <FaMountain />, link: '#', corDestaque: '#14B8A6' }, // Cor atualizada
+    { titulo: 'Atrativos Naturais', icone: <FaMountain />, link: '#', corDestaque: '#14B8A6' },
     { titulo: 'Gastronomia Local', icone: <FaUtensils />, link: '#', corDestaque: '#FFA726' },
     { titulo: 'Cultura e História', icone: <FaCalendarAlt />, link: '#', corDestaque: '#4FC3F7' },
     { titulo: 'Roteiros Prontos', icone: <FaRoute />, link: '#', corDestaque: '#AB47BC' },
@@ -18,10 +24,10 @@ const categorias = [
 ];
 
 const atracoesPopulares = [
-    { id: 1, nome: "Memorial Frei Damião", preco: "R$ 0", avaliacao: 4.8, reviews: 320, fotoUrl: 'https://placehold.co/600x400/1A2B44/F0F4F8?text=Memorial+Frei+Damião', selo: "Imperdível" },
-    { id: 2, nome: "Restaurante Sabor da Terra", preco: "R$ 45/pessoa", avaliacao: 4.6, reviews: 150, fotoUrl: 'https://placehold.co/600x400/1A2B44/F0F4F8?text=Sabor+da+Terra', selo: "Preferido RotaÊ" },
-    { id: 3, nome: "Parque Ecológico do Cristo", preco: "R$ 10", avaliacao: 4.9, reviews: 500, fotoUrl: 'https://placehold.co/600x400/1A2B44/F0F4F8?text=Parque+do+Cristo', selo: "Natureza" },
-    { id: 4, nome: "Centro de Artesanato Local", preco: "R$ 0", avaliacao: 4.4, reviews: 80, fotoUrl: 'https://placehold.co/600x400/1A2B44/F0F4F8?text=Artesanato', selo: "Artesanato" },
+    { id: 1, nome: 'Museu Memórias Vivas', preco: "R$ 0", avaliacao: 4.8, reviews: 320, fotoUrl: imgMuseu, selo: "Preferido ROTAÊ" },
+    { id: 2, nome: 'Restaurante Panela de Barro', preco: "R$ 45/pessoa", avaliacao: 4.6, reviews: 150, fotoUrl: imgPanela, selo: "Imperdível" },
+    { id: 3, nome: 'Parque do Bambu', preco: "R$ 0", avaliacao: 4.9, reviews: 500, fotoUrl: imgBambu, selo: "Natureza" },
+    { id: 4, nome: 'Cristo', preco: "R$ 0", avaliacao: 4.4, reviews: 80, fotoUrl: imgCristo, selo: "Religião" },
 ];
 
 
@@ -61,17 +67,15 @@ function Home() {
                 </div>
 
                 <div className="rt-hero-content">
-                    <h1 className="rt-main-search-title">Comece sua busca em Belo Jardim.</h1>
+                    <h1 className="rt-main-search-title">Venha conhecer Belo Jardim!</h1>
                     
-                    <div className="rt-filter-bar">
                         <div className="rt-search-input-group">
                             <FaSearch className="rt-search-icon" /> 
                             <input 
                                 type="text" 
-                                placeholder="Buscar roteiros, lugares ou eventos..." 
+                                placeholder="Buscar lugares, eventos..." 
                                 className="rt-search-input"
                             />
-                        </div>
                     </div>
                 </div>
 

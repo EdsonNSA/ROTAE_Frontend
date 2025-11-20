@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import './Footer.css'; 
+import imgrotae from '../../../images/ROTAE.png';
 
 const Footer = () => {
   const infoContato = {
@@ -23,10 +24,10 @@ const Footer = () => {
       <div className="ft-footer-content">
         <div className="ft-footer-section ft-footer-info">
           <Link to="/" className="ft-footer-logo-link">
-            <img src="/ROTAE.png" alt="RotaÊ Logo" className="ft-footer-logo" />
-            <span className="ft-footer-logo-text">RotaÊ</span>
+            <img src={imgrotae} alt="ROTAÊ Logo" className="ft-footer-logo" />
+            <span className="ft-footer-logo-text">ROTAÊ</span>
           </Link>
-          <p className="ft-tagline">Seu guia definitivo para o autêntico Belo Jardim.</p>
+          <p className="ft-tagline">Seu guia definitivo para o turismo em Belo Jardim.</p>
           <div className="ft-social-links">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
@@ -52,7 +53,7 @@ const Footer = () => {
       </div>
     
       <div className="ft-footer-bottom">
-        <p>&copy; {new Date().getFullYear()} RotaÊ - Todos os direitos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} ROTAÊ - Todos os direitos reservados.</p>
       </div>
     </footer>
   );

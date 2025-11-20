@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
+import imgPanela from '../../images/panela_de_barro.jpg';
+import imgCristo from '../../images/Cristo.jpg';
+import imgBambu from '../../images/Parque_do_Bambu.jpg';
+import imgMuseu from '../../images/museu_memorias_vivas.jpg';
 import './Lugares.css'; 
 
 const FaStar = () => (
@@ -15,8 +19,8 @@ const mockLugares = [
     categoria: 'Histórico/Religioso',
     mediaAvaliacao: 4.7,
     totalAvaliacoes: 154,
-    descricao: 'Importante marco cultural e religioso da cidade, com uma estátua imponente e local de oração.',
-    fotoUrl: 'https://placehold.co/600x400/1A2B44/F0F4F8?text=Cristo', 
+    descricao: 'Importante marco cultural e religioso da cidade.',
+    fotoUrl: imgCristo, 
   },
   {
     id: '2',
@@ -24,8 +28,8 @@ const mockLugares = [
     categoria: 'Gastronomia',
     mediaAvaliacao: 4.5,
     totalAvaliacoes: 89,
-    descricao: 'Comida regional nordestina autêntica, servida em um ambiente familiar e acolhedor.',
-    fotoUrl: 'https://placehold.co/600x400/1A2B44/F0F4F8?text=Panela+de+Barro', 
+    descricao: 'Comida regional nordestina, servida em um ambiente familiar e acolhedor.',
+    fotoUrl: imgPanela, 
   },
   {
     id: '3',
@@ -33,8 +37,8 @@ const mockLugares = [
     categoria: 'Natureza/Lazer',
     mediaAvaliacao: 4.8,
     totalAvaliacoes: 210,
-    descricao: 'Área verde com trilhas, vista panorâmica e o famoso Cristo Redentor local. Ótimo para piqueniques.',
-    fotoUrl: 'https://placehold.co/600x400/1A2B44/F0F4F8?text=Parque+do+Bambu',
+    descricao: 'Area de lazer com playground infantil, quadras e ótimo para caminhadas.',
+    fotoUrl: imgBambu,
   },
   {
     id: '4',
@@ -43,7 +47,7 @@ const mockLugares = [
     mediaAvaliacao: 4.2,
     totalAvaliacoes: 55,
     descricao: 'Coleção de peças que contam a história de Belo Jardim e sua evolução industrial.',
-    fotoUrl: 'https://placehold.co/600x400/1A2B44/F0F4F8?text=Museu',
+    fotoUrl: imgMuseu,
   },
 ];
 
@@ -87,6 +91,7 @@ function Lugares() {
                 </div>
                 <div className="lg-card-info-atracao">
                   <h4>{lugar.nome}</h4>
+                  <p className="lg-card-description">{lugar.descricao}</p>
                   <div className="lg-card-rating-atracao">
                     <FaStar /> {lugar.mediaAvaliacao.toFixed(1)} ({lugar.totalAvaliacoes} avaliações)
                   </div>

@@ -42,7 +42,7 @@ const Header = () => {
             <div className="logo">
                 <Link to="/">
 
-                    ROTAÊ
+            <span className="ft-footer-logo-text">ROTAÊ</span>
                 </Link>
             </div>
             
