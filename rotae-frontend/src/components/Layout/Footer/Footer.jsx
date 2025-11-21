@@ -6,8 +6,8 @@ import imgrotae from '../../../images/ROTAE.png';
 
 const Footer = () => {
   const infoContato = {
-    telefone: '(81) 8830-6577',
-    email: 'contato@rotae.com.br',
+    telefone: '(81) 98830-6577',
+    email: 'contato.rotae@gmail.com',
     endereco: 'Belo Jardim, Pernambuco - Brasil'
   };
 
@@ -31,7 +31,7 @@ const Footer = () => {
           <div className="ft-social-links">
             <a href="https://wa.me/558188306577" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><FaWhatsapp /></a>
             <a href="https://www.instagram.com/turismorotae_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-            <a href="mailto:contato@rotae.com.br" target="_blank" rel="noopener noreferrer" aria-label="Email"><FaEnvelope /></a>
+            <a href="mailto:contato.rotae@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><FaEnvelope /></a>
           </div>
         </div>
         
