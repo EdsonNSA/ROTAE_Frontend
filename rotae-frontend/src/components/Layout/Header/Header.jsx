@@ -1,17 +1,14 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
-
+import imgRotae from '../../../images/ROTAE.png'; 
 
 const Header = () => {
 
     const renderNavLinks = () => (
         <nav className="main-nav">
             <ul className="nav-list">
-
-                
                 <li>
-                    
                     <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} end>
                         Início
                     </NavLink>
@@ -38,24 +35,23 @@ const Header = () => {
     return (
         <header className="site-header">
             
-
             <div className="logo">
                 <Link to="/">
-
-            <span className="ft-footer-logo-text">ROTAÊ</span>
+                    <img src={imgRotae} alt="RotaÊ Logo" className="header-logo-img" />
+                    <span className="header-logo-text">ROTAÊ</span>
                 </Link>
             </div>
             
             {renderNavLinks()}
 
             <div className="header-actions">
-                <Link to="/criar-roteiro" className="btn btn-primary create-button">
+                <Link to="#" className="create-button">
                     + Criar Roteiro
                 </Link>
                 
-                <Link to="/login" className="user-icon">
+                {/* <Link to="#" className="user-icon">
                     👤
-                </Link>
+                </Link> */}
             </div>
         </header>
     );

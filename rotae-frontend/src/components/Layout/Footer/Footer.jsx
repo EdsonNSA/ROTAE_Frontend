@@ -1,22 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaTwitter, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter, FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css'; 
 import imgrotae from '../../../images/ROTAE.png';
 
 const Footer = () => {
   const infoContato = {
-    telefone: '(81) 9999-0000',
+    telefone: '(81) 8830-6577',
     email: 'contato@rotae.com.br',
     endereco: 'Belo Jardim, Pernambuco - Brasil'
   };
 
   const linksUteis = [
-    { name: 'Sobre Nós', path: '/sobre' },
-    { name: 'Termos de Uso', path: '/termos' },
-    { name: 'Política de Privacidade', path: '/privacidade' },
-    { name: 'Trabalhe Conosco', path: '/trabalhe' },
-    { name: 'Parceiros Premium', path: '/parceiros' },
+    { name: 'Sobre Nós', path: '#' },
+    { name: 'Termos de Uso', path: '#' },
+    { name: 'Política de Privacidade', path: '#' },
+    { name: 'Trabalhe Conosco', path: '#' },
+    { name: 'Parceiros Premium', path: '#' },
   ];
 
   return (
@@ -29,9 +29,9 @@ const Footer = () => {
           </Link>
           <p className="ft-tagline">Seu guia definitivo para o turismo em Belo Jardim.</p>
           <div className="ft-social-links">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
+            <a href="https://wa.me/558188306577" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><FaWhatsapp /></a>
+            <a href="https://www.instagram.com/turismorotae_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+            <a href="mailto:contato@rotae.com.br" target="_blank" rel="noopener noreferrer" aria-label="Email"><FaEnvelope /></a>
           </div>
         </div>
         

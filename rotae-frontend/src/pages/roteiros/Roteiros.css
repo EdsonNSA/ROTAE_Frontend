@@ -83,7 +83,7 @@
 
     .rtn-roteiro-card {
       background-color: var(--fundo-secundario);
-      border: 1px solid var(--cor-detalhe);
+      border: 3.5px solid var(--cor-detalhe);
       border-radius: var(--border-radius-global);
       overflow: hidden;
       box-shadow: var(--sombra-card);

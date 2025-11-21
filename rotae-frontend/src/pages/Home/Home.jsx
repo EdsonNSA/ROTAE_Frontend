@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FaSearch, FaMountain, FaUtensils, FaUsers, FaCalendarAlt, FaStar, FaRoute } from 'react-icons/fa';
 import './Home.css';
-import imgcarrossel1 from '../../images/carrossel1.jpeg';
+import imgcarrossel2 from '../../images/carrossel1.jpeg';
 import imgCristo from '../../images/Cristo.jpg';
 import imgBambu from '../../images/Parque_do_Bambu.jpg';
 import imgMuseu from '../../images/museu_memorias_vivas.jpg';
 import imgPanela from '../../images/panela_de_barro.jpg';
-import imgcarrossel2 from '../../images/carrossel2.jpeg';
+import imgcarrossel1 from '../../images/carrossel2.jpeg';
 import imgcarrossel3 from '../../images/carrossel3.jpg';
 
 const heroImages = [
@@ -69,14 +69,14 @@ function Home() {
                 <div className="rt-hero-content">
                     <h1 className="rt-main-search-title">Venha conhecer Belo Jardim!</h1>
                     
-                        <div className="rt-search-input-group">
+                        {/* <div className="rt-search-input-group">
                             <FaSearch className="rt-search-icon" /> 
                             <input 
                                 type="text" 
                                 placeholder="Buscar lugares, eventos..." 
                                 className="rt-search-input"
                             />
-                    </div>
+                    </div> */}
                 </div>
 
             </section>
